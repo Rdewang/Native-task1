@@ -8,6 +8,12 @@ router.post("/addcategory", category.AddCategory)
 router.post("/additem", item.AddItem)
 router.get("/getitembycatid/:id", item.getItembyCatId)
 router.get("/getitembyid/:id", item.getItembyId)
+router.get("/getitembyid/:id", (req,res) => {
+    res.json({
+        msg : "Home Page Here"
+    })
+
+})
 
 //Cart
 router.post("/addtocart/:id", cart.AddToCart)
