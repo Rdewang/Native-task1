@@ -8,6 +8,7 @@ const knexconfig = require("./knexfile");
 const app = express();
 const port = process.env.PORT || 4000;
 const routes = require("./Routes/route")
+const path = require("path");
 
 // knex intialization
 const knex = Knex(knexconfig['development']);
@@ -16,6 +17,7 @@ Model.knex(knex);
 app.use(cors());
 app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: false }));
+app.use(express.static(path.join(__dirname, 'public')))
 
 app.use(routes)
 
