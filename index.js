@@ -6,7 +6,7 @@ const { Model } = require("objection")
 const knexconfig = require("./knexfile");
 // Set up the express app
 const app = express();
-const port = 4000;
+const port = process.env.PORT || 4000;
 const routes = require("./Routes/route")
 
 // knex intialization
