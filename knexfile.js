@@ -16,7 +16,14 @@ module.exports = {
   production: {
     client: 'pg',
     // connection: process.env.DATABASE_URL +`?ssl=true`,
-    connection: process.env.DATABASE_URL,
+    connection: "postgres://postgres:postgres154@pg-cod-dev.czlq5hstepxm.ap-south-1.rds.amazonaws.com:5432/rishabhdb",
+    // connection: {
+    //   user: 'postgres',
+    //   host: 'http://pg-cod-dev.czlq5hstepxm.ap-south-1.rds.amazonaws.com/',
+    //   database: 'rishabhdb',
+    //   password: 'postgres154',
+    //   port: 5432,
+    // },
     
     migrations: {
       directory : './migrations'
