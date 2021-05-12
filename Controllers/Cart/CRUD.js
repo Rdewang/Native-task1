@@ -70,7 +70,7 @@ const DeleteItem = async (req, res) => {
     } else {
         res.json({
             status: false,
-            msg: "Unable to Update Quantity"
+            msg: "Unable to Delete Quantity"
         })
     }
 }
