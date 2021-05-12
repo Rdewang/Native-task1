@@ -78,7 +78,8 @@ const DeleteItem = async (req, res) => {
 const EmptyCart = async (req, res) => {
 
     // const response = Cart.query().delete().where('id', '>', 0);
-    const response = Cart.query().truncate();
+    // const response = Cart.query().truncate();
+    const response = await Cart.query().delete();
     if (response) {
         res.json({
             status: true,
